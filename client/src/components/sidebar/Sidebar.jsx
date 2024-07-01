@@ -11,12 +11,27 @@ export default function Sidebar() {
           alt=""
         />
         <p>
-          Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
-          amet ex esse.Sunt eu ut nostrud id quis proident.
+          <strong>
+            <center>Bloggers United</center>
+          </strong></p><p>
+          A vibrant community where bloggers come together to connect,
+          collaborate, and grow. Whether you're a seasoned blogger or just
+          starting out, join us on this journey of sharing ideas, learning from
+          each other, and expanding your reach.
+        </p>
+        <p>
+          <strong>
+            <center>Our Mission</center>
+          </strong>
+        </p>
+        <p>
+          At Bloggers United, our mission is to foster a supportive environment
+          where bloggers of all niches and interests can thrive. We believe in
+          the power of collaboration and community to inspire creativity,
+          enhance skills, and achieve mutual success in the blogosphere.
         </p>
       </div>
-      
-     
+
       <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">

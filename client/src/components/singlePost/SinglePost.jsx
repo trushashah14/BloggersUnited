@@ -46,6 +46,12 @@ export default function SinglePost() {
     } catch (err) {}
   };
 
+  const handleTwitterShare = () => {
+    const tweetContent = `Check out "${title}" by ${post.username} on Bloggers United! ${window.location.href}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetContent)}`;
+    window.open(twitterUrl, "_blank");
+  };
+
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
@@ -106,6 +112,12 @@ export default function SinglePost() {
             Update
           </button>
         )}
+
+       <div className="button-container">
+          <button className="twitter-button" id="twitter" title="Tweet This!" onClick={handleTwitterShare}>
+            <i className="fab fa-twitter"></i>
+          </button>
+        </div>
       </div>
     </div>
   );
