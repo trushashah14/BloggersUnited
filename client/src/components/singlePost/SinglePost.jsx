@@ -40,15 +40,17 @@ export default function SinglePost() {
         username: user.username,
         title,
         desc,
-        url: user.linkinUrl
+        linkedinUrl: post.linkedinUrl, 
       });
-      setUpdateMode(false)
+      setUpdateMode(false);
     } catch (err) {}
   };
 
   const handleTwitterShare = () => {
     const tweetContent = `Check out "${title}" by ${post.username} on Bloggers United! ${window.location.href}`;
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetContent)}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+      tweetContent
+    )}`;
     window.open(twitterUrl, "_blank");
   };
 
@@ -91,9 +93,11 @@ export default function SinglePost() {
             </Link>
           </span>
           <span>
-          
-            Follow me on <a href="https://www.linkedin.com/in/trushashah142/" target='_blank'>LinkedIn</a>
-            </span>
+            Follow me on{" "}
+            <a href={post.linkedinUrl} target="_blank">
+              LinkedIn
+            </a>
+          </span>
           <span className="singlePostDate">
             {new Date(post.createdAt).toDateString()}
           </span>
@@ -113,8 +117,13 @@ export default function SinglePost() {
           </button>
         )}
 
-       <div className="button-container">
-          <button className="twitter-button" id="twitter" title="Tweet This!" onClick={handleTwitterShare}>
+        <div className="button-container">
+          <button
+            className="twitter-button"
+            id="twitter"
+            title="Tweet This!"
+            onClick={handleTwitterShare}
+          >
             <i className="fab fa-twitter"></i>
           </button>
         </div>

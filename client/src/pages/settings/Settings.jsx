@@ -1,6 +1,6 @@
 import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
-import { useContext, useState } from "react";
+import { useContext, useEffect,useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
 
@@ -9,11 +9,17 @@ export default function Settings() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [url, setUrl] = useState("");
+  const [linkedinUrl, setLinkedinUrl] = useState("");
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
   const PF = "http://localhost:5000/images/"
+
+  useEffect(() => {
+    setUsername(user.username);
+    setEmail(user.email);
+    setLinkedinUrl(user.linkedinUrl); // Set LinkedIn URL from user context
+  }, [user]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,7 +29,7 @@ export default function Settings() {
       username,
       email,
       password,
-      url
+      linkedinUrl,
     };
     if (file) {
       const data = new FormData();
@@ -70,20 +76,21 @@ export default function Settings() {
           <label>Username</label>
           <input
             type="text"
-            placeholder={user.username}
+            value={user.username}
             onChange={(e) => setUsername(e.target.value)}
           />
           <label>Email</label>
           <input
             type="email"
-            placeholder={user.email}
+            value={user.email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label>LinkedIn</label>
+          <label>LinkedIn URL</label>
           <input
             type="text"
-            placeholder={user.url}
-            onChange={(e) => setUrl(e.target.value)}
+            placeholder="Enter your LinkedIn URL"
+            value={linkedinUrl}
+            onChange={(e) => setLinkedinUrl(e.target.value)}
           />
           <label>Password</label>
           <input

@@ -20,10 +20,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    linkinUrl: {
-      type: String,
-      default: "",
-    },
+    linkedinUrl: {
+        type: String, // Assuming the LinkedIn URL will be a string
+        default: "", // Optional default value if needed
+      },
   },
   { timestamps: true }
 );

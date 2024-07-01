@@ -8,6 +8,7 @@ export default function Newblog() {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
+  const [linkedinUrl, setLinkedinUrl] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,6 +17,7 @@ export default function Newblog() {
       username: user.username,
       title,
       desc,
+      linkedinUrl
     };
     if (file) {
       const data =new FormData();
@@ -30,6 +32,7 @@ export default function Newblog() {
     try {
       const res = await axios.post("http://localhost:5000/api/posts", newPost);
       window.location.replace("/post/" + res.data._id);
+      
     } catch (err) {}
   };
   return (
@@ -61,6 +64,16 @@ export default function Newblog() {
             onChange={e=>setDesc(e.target.value)}
           >
           </textarea>
+       
+         
+        </div>
+        <div className="newblogFormGroup">
+        <input
+            className="newblogInput"
+            placeholder="LinkedIn URL"
+            type="text"
+            onChange={(e) => setLinkedinUrl(e.target.value)}
+          />
         </div>
         <button className="newblogSubmit" type="submit">
           Publish

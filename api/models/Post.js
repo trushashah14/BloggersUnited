@@ -18,7 +18,11 @@ const PostSchema = new mongoose.Schema(
     username: {
       type: String,
       required: true,
-    }
+    },
+    linkedinUrl: {  // Add this field for author's LinkedIn URL
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );
