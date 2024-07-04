@@ -46,14 +46,17 @@
     border: none;
     border-radius: 10px;
     text-align: center;
+
   }
   
   .loginButton:disabled{
     cursor: not-allowed;
     background-color: rgb(252, 173, 173);
   }
-  
+
   .loginRegisterButton {
+    height: auto;
+    font-size: large;
     position: absolute;
     top: 60px;
     right: 20px;
@@ -63,4 +66,26 @@
     border: none;
     color: white;
     border-radius: 10px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+
+    .loginRegisterButton {
+      font-size: 15px;
+    
+      top: 80px;
+
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+   
+
+    .loginRegisterButton {
+      font-size: 15px;
+    
+      top: 80px;
+
+    }
   }

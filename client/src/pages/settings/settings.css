@@ -1,5 +1,6 @@
 .settings {
   display: flex;
+  width: 100vw;
 }
 
 .settingsWrapper {
@@ -80,3 +81,18 @@
     margin-top: 20px;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

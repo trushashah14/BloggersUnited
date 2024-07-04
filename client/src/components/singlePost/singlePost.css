@@ -1,10 +1,10 @@
 .singlePost {
+  width: 100vw;
   flex: 9;
 }
 
 .singlePostWrapper {
   padding: 20px;
-  padding-right: 0;
   display: flex;
   flex-direction: column;
 }
@@ -124,4 +124,214 @@ button:active{
 .twitter-button:hover{
   color:#38a1f3;
 
+}
+
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1024px) {
+  .singlePostWrapper {
+    padding: 15px;
+    
+  
+  }
+  
+  .singlePostImg {
+    width: 100%;
+    height: 340px;
+  }
+  
+  .singlePostTitle {
+    margin: 12px;
+    font-size: 28px;
+  }
+  
+  .singlePostTitleInput {
+    margin: 12px;
+    font-size: 28px;
+  }
+
+  
+  .singlePostEdit {
+    font-size: 14px;
+  }
+  
+  .singlePostIcon {
+    margin-left: 10px;
+  }
+  
+  
+  .singlePostInfo {
+    margin-bottom: 16px;
+    font-size: 18px;
+
+  }
+  
+  .singlePostDesc {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  .singlePostDesc::first-letter {
+    font-size: 32px;
+  }
+  
+  .singlePostDescInput {
+
+    font-size: 15px;
+    line-height: 22px;
+  }
+  
+  .singlePostButton {
+    width: 80px;
+  }
+  
+  button{
+    font-size: 1rem;
+    height: 2rem;
+  }
+
+  .twitter-button{
+    margin-top: 10px;
+    width:50px;
+    height:40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .singlePostWrapper {
+    padding: 12px;
+  width: 110vw;
+  }
+  
+  .singlePostImg {
+    width: 100%;
+    margin: 0px 2px;
+    height: 300px;
+  }
+  
+  .singlePostTitle {
+    margin: 10px;
+    font-size: 24px;
+  }
+  
+  .singlePostTitleInput {
+    margin: 10px;
+    font-size: 24px;
+  }
+
+  
+  .singlePostEdit {
+    font-size: 10px;
+  }
+  
+  .singlePostIcon {
+    margin-left: 10px;
+  }
+  
+  
+  .singlePostInfo {
+    margin-bottom: 13px;
+    font-size: 13px;
+
+  }
+  
+  .singlePostDesc {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  
+  .singlePostDesc::first-letter {
+    font-size: 22px;
+  }
+  
+  .singlePostDescInput {
+
+    font-size: 12px;
+    line-height: 20px;
+  }
+  
+  .singlePostButton {
+    width: 80px;
+  }
+  
+  button{
+    font-size: 1rem;
+    height: 2rem;
+  }
+
+  .twitter-button{
+    width:30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+  .singlePostWrapper {
+    width: 118vw;
+    padding: 10px;
+  
+  }
+  
+  .singlePostImg {
+    height: 290px;
+    margin: 0px 2px;
+width: 100%;
+  }
+  
+  .singlePostTitle {
+    margin: 8px;
+    font-size: 20px;
+  }
+  
+  .singlePostTitleInput {
+    margin: 8px;
+    font-size: 20px;
+  }
+
+  
+  .singlePostEdit {
+    font-size: 8px;
+  }
+  
+  .singlePostIcon {
+    margin-left: 10px;
+  }
+  
+  
+  .singlePostInfo {
+    margin-bottom: 10px;
+    font-size: 10px;
+
+  }
+  
+  .singlePostDesc {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  
+  .singlePostDesc::first-letter {
+    font-size: 20px;
+  }
+  
+  .singlePostDescInput {
+
+    font-size: 12px;
+    line-height: 20px;
+  }
+  
+  .singlePostButton {
+    width: 80px;
+  }
+  
+  button{
+    font-size: 1rem;
+    height: 2rem;
+  }
+
+  .twitter-button{
+    width:34px;
+    height: 30px;
+  }
 }

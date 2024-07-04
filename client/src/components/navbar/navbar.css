@@ -1,5 +1,6 @@
 .nav {
-  width: 100%;
+  width: 100vw;
+  /* margin:6px; */
   height: 50px;
   background-color: white;
   position: sticky;
@@ -16,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 10px 10px;
 }
 
 .navCenter {
@@ -24,7 +26,7 @@
 
 .navIcon {
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 5px;
   color: #444;
   cursor: pointer;
 }
@@ -32,13 +34,11 @@
 .navList {
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
 .navListItem {
-  margin-right: 20px;
+  margin-right: 10px;
   font-size: 18px;
   font-weight: 300;
   cursor: pointer;
@@ -61,4 +61,72 @@
   font-size: 18px;
   color: #666;
   cursor: pointer;
+  margin-right:15px ;
 }
+
+
+
+/* Media Queries for Responsive Design */
+
+
+@media screen and (max-width: 1024px) {
+
+  .navListItem {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .navImg {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .navSearchIcon {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+
+  
+  .navListItem {
+    font-size: 10px;
+    margin-right: 10px;
+
+  }
+  
+  .navImg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .navSearchIcon {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav {
+    width: 60vw;
+    margin: 10px;
+  }
+  .navLeft,
+.navRight {
+  margin:0px 2px
+}
+    
+  .navListItem {
+    font-size: 10px;
+    margin-right: 10px;
+  }
+  
+  .navImg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .navSearchIcon {
+    font-size: 16px;
+    
+  }
+}
+

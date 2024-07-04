@@ -50,12 +50,34 @@
   
   .registerLoginButton {
     position: absolute;
+    font-size: large;
     top: 60px;
     right: 20px;
     background-color: lightcoral;
     cursor: pointer;
-    padding: 10px;
+    padding: 8px;
     border: none;
     color: white;
     border-radius: 10px;
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+
+    .registerLoginButton {
+      top: 60px;
+      padding-top: 8px;
+ 
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+   
+
+    .registerLoginButton {
+      top: 80px;
+      padding-top: 8px;
+ 
+    }
   }
