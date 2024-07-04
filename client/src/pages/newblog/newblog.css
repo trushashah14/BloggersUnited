@@ -1,3 +1,7 @@
+#p_wrap {
+  white-space: pre-line;
+}
+
 .newblog {
   padding-top: 50px;
 }
@@ -38,7 +42,7 @@
   border: none;
   padding: 20px;
   /* width: 70vw; */
-  width: calc(70vw - 24px);
+  width: 580px;
 }
 
 .newblogInput::placeholder {
@@ -77,6 +81,15 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+
+  .newblogInput {
+    width: 550px;
+
+  }
+
+}
+
 @media screen and (max-width: 768px) {
   .newblogImg {
     margin-left: 50px;
@@ -88,6 +101,8 @@
 
   .newblogInput {
     font-size: 20px;
+    width: 490px;
+
   }
 
   .newblogSubmit {
@@ -107,6 +122,9 @@
 
   .newblogInput {
     font-size: 15px;
+    width: 180px;
+
+
   }
 
   .newblogSubmit {

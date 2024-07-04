@@ -55,7 +55,7 @@ export default function Newblog() {
             onChange={e=>setTitle(e.target.value)}
           />
         </div>
-        <div className="newblogFormGroup">
+        <div className="newblogFormGroup" id="p_wrap">
           <textarea
             className="newblogInput newblogText"
             placeholder="Write your insights..."
