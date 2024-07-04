@@ -106,7 +106,7 @@
 
 @media screen and (max-width: 480px) {
   .nav {
-    width: 20vw;
+    /* width: 20vw; */
     margin: 5px;
   }
   .navLeft,
