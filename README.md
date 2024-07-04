@@ -37,19 +37,12 @@ A dynamic blog website using React JS and MongoDB where users can view/create/de
 - **HTTP Client:** Axios
 - **Form Handling:** React Hook Form
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/dynamic-blog-website.git
-   cd dynamic-blog-website
-
 
 ### To run the project locally, follow these steps:
 
 #### Clone the repository:
 
-```git clone https://github.com/trushashah14/BloggersUnited.git
-```
+```git clone https://github.com/trushashah14/BloggersUnited.git```
 
 
 
