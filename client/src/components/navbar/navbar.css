@@ -106,8 +106,8 @@
 
 @media screen and (max-width: 480px) {
   .nav {
-    width: 60vw;
-    margin: 10px;
+    width: 20vw;
+    margin: 5px;
   }
   .navLeft,
 .navRight {
@@ -125,8 +125,14 @@
   }
   
   .navSearchIcon {
-    font-size: 16px;
+    font-size: 10px;
     
+  }
+
+  .navIcon {
+    font-size: 13px;
+
+
   }
 }
 
