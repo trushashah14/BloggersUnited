@@ -121,7 +121,15 @@ button:active{
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
-.twitter-button:hover{
+
+.twitter-button , .linkedin-button , .facebook-button{
+  margin: 10px;
+  width:50px;
+    height:40px;
+}
+
+
+.twitter-button:hover, .linkedin-button:hover, .facebook-button:hover{
   color:#38a1f3;
 
 }
@@ -132,7 +140,7 @@ button:active{
 @media screen and (max-width: 1024px) {
   .singlePostWrapper {
     padding: 15px;
-    
+
   
   }
   
@@ -191,7 +199,7 @@ button:active{
     height: 2rem;
   }
 
-  .twitter-button{
+  .twitter-button, .linkedin-button , .facebook-button{
     margin-top: 10px;
     width:50px;
     height:40px;
@@ -260,7 +268,7 @@ button:active{
     height: 2rem;
   }
 
-  .twitter-button{
+  .twitter-button, .linkedin-button , .facebook-button{
     width:30px;
     height: 30px;
   }
@@ -330,7 +338,7 @@ width: 100%;
     height: 2rem;
   }
 
-  .twitter-button{
+  .twitter-button, .linkedin-button , .facebook-button{
     width:34px;
     height: 30px;
   }

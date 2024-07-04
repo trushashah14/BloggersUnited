@@ -40,7 +40,7 @@ export default function SinglePost() {
         username: user.username,
         title,
         desc,
-        linkedinUrl: post.linkedinUrl, 
+        linkedinUrl: post.linkedinUrl,
       });
       setUpdateMode(false);
     } catch (err) {}
@@ -52,6 +52,28 @@ export default function SinglePost() {
       tweetContent
     )}`;
     window.open(twitterUrl, "_blank");
+  };
+
+  const handleLinkedInShare = () => {
+    const shareContent = `Check out "${title}" by ${post.username} on Bloggers United! ${window.location.href}`;
+    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?text=${encodeURIComponent(
+      shareContent
+    )}`;
+    window.open(linkedinUrl, "_blank");
+  };
+
+  const handleFacebookShare = () => {
+    const facebookShareURL = "www.google.com";
+
+    let facebookParameters = [];
+
+    facebookParameters.push("u=" + encodeURI(facebookShareURL));
+    facebookParameters.push("quote=Check out the blogs");
+    const facebookUrl =
+      "https://www.facebook.com/sharer/sharer.php?" +
+      facebookParameters.join("&");
+    // const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    window.open(facebookUrl, "_blank");
   };
 
   return (
@@ -125,6 +147,23 @@ export default function SinglePost() {
             onClick={handleTwitterShare}
           >
             <i className="fab fa-twitter"></i>
+          </button>
+          <button
+            className="linkedin-button"
+            id="linkedin"
+            title="Share This!"
+            onClick={handleLinkedInShare}
+          >
+            <i className="fab fa-linkedin"></i>
+          </button>
+
+          <button
+            className="facebook-button"
+            id="facebook"
+            title="Share This!"
+            onClick={handleFacebookShare}
+          >
+            <i className="fab fa-facebook"></i>
           </button>
         </div>
       </div>
